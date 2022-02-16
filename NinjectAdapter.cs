@@ -18,7 +18,7 @@ namespace Remnant.Dependency.Ninject
 
 		public IContainer Clear()
 		{
-			throw new NotSupportedException("Unity does not support 'Clear'.");
+			throw new NotSupportedException("Clear not supprted for ninject for now.");
 		}
 
 		public IContainer DeRegister<TType>() where TType : class
