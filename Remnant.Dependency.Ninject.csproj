@@ -15,17 +15,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\Remnant.Dependency.SimpleInjector\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\Remnant.Dependency.SimpleInjector\Remnant.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Ninject" Version="3.3.4" />
     <PackageReference Include="Remnant.Dependency.Injector" Version="1.0.4" />
     <PackageReference Include="Remnant.Dependency.Interface" Version="1.0.1" />
@@ -34,6 +23,14 @@
   <ItemGroup>
     <None Update="LICENSE">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Remnant.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
