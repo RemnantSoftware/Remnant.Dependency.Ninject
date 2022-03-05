@@ -31,9 +31,15 @@ namespace Remnant.Dependency.Ninject
 			throw new NotSupportedException("Deregister not supported for ninject for now.");
 	}
 
-		public IContainer Register<TType>(TType instance) where TType : class
+		public IContainer Register<TType>(object instance) where TType : class
 		{
-			_kernel.Bind<TType>().ToConstant(instance);
+			_kernel.Bind<TType>().ToConstant(instance as TType);
+			return this;
+		}
+
+		public IContainer Register(Type type, object instance)
+		{
+			_kernel.Bind(type).ToConstant(instance);
 			return this;
 		}
 

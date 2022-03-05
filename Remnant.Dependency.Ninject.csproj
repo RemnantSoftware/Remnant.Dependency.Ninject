@@ -11,6 +11,7 @@
     <Copyright>© 2022 by Neill Verreynne</Copyright>
     <PackageTags>container;inject;dependency;transient;singleton;injection;pull;global;ninject</PackageTags>
     <Description>Ninject dependency injection adapter</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,8 +27,8 @@
 
   <ItemGroup>
     <PackageReference Include="Ninject" Version="3.3.4" />
-    <PackageReference Include="Remnant.Dependency.Injector" Version="1.0.2" />
-    <PackageReference Include="Remnant.Dependency.Interface" Version="1.0.0" />
+    <PackageReference Include="Remnant.Dependency.Injector" Version="1.0.4" />
+    <PackageReference Include="Remnant.Dependency.Interface" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
