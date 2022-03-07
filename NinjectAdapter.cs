@@ -10,10 +10,7 @@ namespace Remnant.Dependency.Ninject
 
 		public NinjectAdapter(IKernel kernel)
 		{
-			if (kernel == null)
-				throw new ArgumentNullException(nameof(kernel));
-
-			_kernel = kernel;
+			_kernel = kernel ?? throw new ArgumentNullException(nameof(kernel));
 		}
 
 		public IContainer Clear()
@@ -66,6 +63,14 @@ namespace Remnant.Dependency.Ninject
 		public TType ResolveInstance<TType>() where TType : class
 		{
 			return _kernel.Get<TType>();
+		}
+
+		public TContainer InternalContainer<TContainer>() where TContainer : class
+		{
+			if (_kernel as TContainer == null)
+				throw new InvalidCastException($"The internal container is of type {_kernel.GetType().FullName} and cannot be cast to {typeof(TContainer).FullName}");
+
+			return _kernel as TContainer;
 		}
 	}
 }

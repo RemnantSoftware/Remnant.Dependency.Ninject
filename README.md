@@ -4,7 +4,7 @@ Ninject dependency injection adapter
 
 ## Nuget package:
 
-        Install-Package Remnant.Dependency.Ninject -Version 1.0.1
+        Install-Package Remnant.Dependency.Ninject -Version 1.0.2
         
 ```csharp
 var ninject = new StandardKernel();
