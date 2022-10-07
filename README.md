@@ -14,5 +14,5 @@ var container = Container.Create("MyContainer", new NinjectAdapter(ninject));
 
 Get direct access to the internal DI container
 ```csharp
-var ninject = Container.Instance.InternalContainer<StandardKernel>();
+var ninject = Container.InternalContainer<StandardKernel>();
 ```
